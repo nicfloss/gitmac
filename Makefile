@@ -1,5 +1,7 @@
 CFLAGS=-g
 CC=gcc
+
+# Mac OS X specific => compile using POSIX specific mode
 COMMAND_MODE=unix2003
 
 PROG=update-cache show-diff init-db write-tree read-tree commit-tree cat-file
