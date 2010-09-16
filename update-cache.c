@@ -144,6 +144,7 @@ static int add_file_to_cache(char *path)
     memset(ce, 0, size);
     memcpy(ce->name, path, namelen);
     ce->ctime.sec = st.st_ctime;
+//FIXME : stat struct is different on MacOSX. Must check what suppose to be.
     ce->ctime.nsec = st.st_ctime.tv_nsec;
     ce->mtime.sec = st.st_mtime;
     ce->mtime.nsec = st.st_mtime.tv_nsec;
